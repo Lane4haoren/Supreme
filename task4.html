@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tesk4</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: 5rem;
+        line-height: 5rem;
+        background-color: #5fc0cd;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    header a {
+        color: white;
+        text-decoration: none;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    main {
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #eff0f4;
+        font-size: 2rem;
+    }
+    .close {
+        float: left;
+    }
+    .sign {
+        float: right;
+    }
+
+    .inputBox {
+        width: 100%;
+        line-height: 5rem;
+        margin-top: 1rem;
+        background-color: white;
+    }
+
+    .inputBox input {
+        width: 100%;
+        padding-left: 8rem;
+        line-height: 5rem;
+        color: darkgrey;
+        outline: none;
+        border: 0 none;
+        font-size: 2rem
+    }
+
+    .inputBox input[name="username"] {
+        background: url("shouji_03.png")no-repeat 0 center;
+        background-size: auto 5rem;
+    }
+
+    .inputBox input[name="password"] {
+        background: url("mima_03.png") no-repeat 0 center;
+        background-size: auto 5rem;
+    }
+
+    .loginButton {
+        width: 100%;
+        height: 5rem;
+        color: white;
+        background-color: #5fc0cd;
+        text-align: center;
+        outline: none;
+        border: 0 none;
+        margin-top: 5rem;
+        font-size: 2rem;
+    }
+
+    .forgetPsw {
+        width: auto;
+        text-align: right;
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+
+    a {
+        color: #5fc0cd;
+        text-decoration: none;
+    }
+</style>
+<body>
+<header>
+    <a href="" class="close">关闭</a>
+    <a href="" class="sign">注册</a>
+    <h1>登录</h1>
+</header>
+<main>
+    <div class="content">
+        <form class="login" action="" method="post">
+            <div class="inputBox"><input name="username" placeholder="请输入手机号"><br/></div>
+            <div class="inputBox"><input type="password" name="password" placeholder="请输入密码"></div>
+            <button class="loginButton">登录</button>
+        </form>
+        <div class="forgetPsw">
+            <a href="">忘记密码?</a>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
