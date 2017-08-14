@@ -1,0 +1,90 @@
+header{
+    font-size: 25px;
+    line-height: 60px;
+    background-color: #5bc0de;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top:0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    border-bottom: 1px solid white;
+}
+main{
+    margin-bottom: 70px;
+    width: 100%;
+    background-color: #5bc0de;
+}
+footer{
+    width: 100%;
+    background-color: rgba(41,189,224,0.5);
+    height: 70px;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+}
+.qop{
+    text-align: center;
+}
+.yxsl{
+    max-width: 50%;
+    margin-top: 100px;
+}
+.yxjg{
+    text-align: center;
+    color: white;
+    flex: 3;
+}
+.fangzi{
+    text-align: center;
+    flex: 1;
+}
+.i{
+    flex: 1;
+}
+.ck{
+    padding-bottom: 10px;
+    padding-left: 10%;
+    color: #ffc865;
+    font-size: 18px;
+}
+.sk{
+    padding-bottom: 20px;
+    padding-left: 10%;
+}
+.pa{
+    color: #a6a6a6;
+    border-bottom: solid 1px #dddddd;
+    padding-left: 10%;
+    background-color: white;
+}
+.ta{
+    display: inline-block;
+    padding-right: 10%;
+}
+.ana{
+    margin-top: 10px;
+    top: 15%;
+    margin-left: 5%;
+    float: left;
+    font-size: 20px;
+    border:none;
+    background-color: #f66f6f;
+    width: 40%;
+    height: 70%;
+}
+.nan{
+    margin-top: 10px;
+    margin-right: 5%;
+    float: right;
+    font-size: 20px;
+    border: none;
+    background-color: #fbb435;
+    width: 40%;
+    height: 70%;
+}
+.sf{
+    margin-right: 10%;
+    float: right;
+}
