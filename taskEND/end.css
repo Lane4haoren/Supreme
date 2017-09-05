@@ -1,0 +1,221 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+header {
+  width: 100%; }
+  header .top-header {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between; }
+    header .top-header span {
+      margin-left: 40px;
+      display: inline-block;
+      color: #29b078;
+      font-size: 10px; }
+    header .top-header .logo {
+      margin-right: 40px; }
+      header .top-header .logo img {
+        max-width: 20px; }
+  header .dh-header {
+    width: 100%;
+    background-color: #29b078; }
+    header .dh-header ul {
+      margin: 0; }
+      header .dh-header ul li {
+        padding: 40px;
+        display: inline-block;
+        color: white; }
+  header .xdh-header label {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px; }
+  header .xdh-header .panel {
+    background-color: #29b078;
+    color: white;
+    display: none; }
+  header .xdh-header input {
+    display: none; }
+  header .xdh-header input[type=checkbox]:checked + .panel {
+    display: block; }
+
+main .container {
+  padding-left: 10%;
+  padding-right: 10%; }
+main .box {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center; }
+  main .box .box1 {
+    display: flex;
+    flex-direction: column;
+    width: 25%; }
+    main .box .box1 p {
+      text-align: center; }
+    main .box .box1 img {
+      margin: 0 auto;
+      display: block; }
+    main .box .box1 span {
+      width: 50%;
+      margin: 0 auto;
+      display: block; }
+  main .box .box2 {
+    width: 25%; }
+    main .box .box2 p {
+      text-align: center; }
+    main .box .box2 img {
+      margin: 0 auto;
+      display: block; }
+    main .box .box2 span {
+      width: 50%;
+      margin: 0 auto;
+      display: block; }
+  main .box .box3 {
+    width: 25%; }
+    main .box .box3 p {
+      text-align: center; }
+    main .box .box3 img {
+      margin: 0 auto;
+      display: block; }
+    main .box .box3 span {
+      width: 50%;
+      margin: 0 auto;
+      display: block; }
+  main .box .box4 {
+    border-left: dashed 2px #dddddd;
+    padding-left: 30px;
+    padding-top: 45px;
+    width: 25%; }
+    main .box .box4 span {
+      display: block; }
+main .howlearn {
+  display: flex;
+  justify-content: center; }
+  main .howlearn .learn1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%; }
+  main .howlearn span {
+    width: 50%; }
+main .howlearn1 {
+  display: flex;
+  justify-content: center; }
+  main .howlearn1 .learn1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%; }
+  main .howlearn1 span {
+    width: 50%; }
+main .student {
+  display: flex;
+  justify-content: space-around; }
+  main .student .student1 {
+    border: solid 2px #dddddd;
+    width: 20%; }
+    main .student .student1 span {
+      display: block;
+      text-align: center; }
+    main .student .student1 img {
+      display: table;
+      margin: 0 auto; }
+main .enterprise {
+  display: flex;
+  justify-content: space-around; }
+  main .enterprise .company img {
+    max-width: 150px;
+    margin: 10px; }
+
+footer .db {
+  display: flex;
+  justify-content: space-evenly; }
+  footer .db .f1 {
+    line-height: 30px;
+    display: inline-block; }
+    footer .db .f1 span {
+      display: block; }
+  footer .db .f2 {
+    line-height: 30px;
+    display: inline-block; }
+    footer .db .f2 span {
+      display: block; }
+  footer .db .f3 {
+    display: inline-block; }
+    footer .db .f3 span {
+      display: block; }
+
+@media screen and (max-width: 768px) {
+  footer .db {
+    display: flex;
+    flex-direction: column; } }
+header .xdh-header .panel p:hover {
+  border-bottom: solid 2px white; }
+
+header .dh-header ul li:hover {
+  border-bottom: 2px solid white; }
+
+@media screen and (max-width: 768px) {
+  ul {
+    display: none; } }
+@media screen and (min-width: 768px) {
+  .xdh-header {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  .xdh-header {
+    display: inline; } }
+@media screen and (min-width: 768px) {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px; } }
+@media screen and (min-width: 768px) {
+  .mid1.mid2.mid3.mid4 {
+    display: block; } }
+@media screen and (max-width: 768px) {
+  main .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .box .box1 {
+      width: 100%; }
+    main .box .box2 {
+      width: 100%; }
+    main .box .box3 {
+      width: 100%; }
+    main .box .box4 {
+      border: none; } }
+@media screen and (max-width: 768px) {
+  main .howlearn {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .howlearn .learn1 {
+      width: 100%; } }
+@media screen and (max-width: 768px) {
+  main .howlearn1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .howlearn1 .learn1 {
+      width: 100%; } }
+@media screen and (max-width: 768px) {
+  main .student {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    main .student .student1 {
+      width: 80%; } }
+@media screen and (max-width: 768px) {
+  main .enterprise {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
+main .student .student1:hover {
+  box-shadow: 1px 1px 15px 1px #999; }
+
+main .container .enterprise .company:hover {
+  box-shadow: 1px 1px 15px 1px #999; }
+
+/*# sourceMappingURL=end.css.map */

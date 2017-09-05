@@ -1,0 +1,138 @@
+@charset "UTF-8";
+html body {
+  margin: 0;
+  padding: 0; }
+
+/*头部封装*/
+header {
+  width: 100%; }
+  header .top-header {
+    display: flex;
+    padding: 8px;
+    justify-content: space-between; }
+    header .top-header span {
+      margin-left: 40px;
+      display: inline-block;
+      color: #29b078;
+      font-size: 10px; }
+    header .top-header .logo {
+      margin-right: 40px; }
+      header .top-header .logo img {
+        max-width: 20px; }
+  header .dh-header {
+    width: 100%;
+    background-color: #29b078; }
+    header .dh-header ul {
+      margin: 0; }
+      header .dh-header ul li {
+        padding: 40px;
+        display: inline-block;
+        color: white; }
+  header .xdh-header label {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px; }
+  header .xdh-header .panel {
+    background-color: #29b078;
+    color: white;
+    display: none; }
+  header .xdh-header input {
+    display: none; }
+  header .xdh-header input[type=checkbox]:checked + .panel {
+    display: block; }
+
+@media screen and (min-width: 768px) {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px; } }
+header .xdh-header .panel p:hover {
+  border-bottom: solid 2px white; }
+
+header .dh-header ul li:hover {
+  border-bottom: 2px solid white; }
+
+@media screen and (max-width: 768px) {
+  ul {
+    display: none; } }
+@media screen and (min-width: 768px) {
+  .xdh-header {
+    display: none; } }
+@media screen and (max-width: 768px) {
+  .xdh-header {
+    display: inline; } }
+/*头部封装*/
+/*底部封装*/
+footer .db {
+  display: flex;
+  justify-content: space-evenly; }
+  footer .db .f1 {
+    line-height: 30px;
+    display: inline-block; }
+    footer .db .f1 span {
+      display: block; }
+  footer .db .f2 {
+    line-height: 30px;
+    display: inline-block; }
+    footer .db .f2 span {
+      display: block; }
+  footer .db .f3 {
+    display: inline-block; }
+    footer .db .f3 span {
+      display: block; }
+
+@media screen and (max-width: 768px) {
+  footer .db {
+    display: flex;
+    flex-direction: column; } }
+/*底部封装*/
+main {
+  padding-right: 10%;
+  padding-left: 10%; }
+  main .nv {
+    border-bottom: solid 2px #dddddd; }
+  main .direction {
+    border-bottom: solid 2px #dddddd;
+    padding: 30px 0; }
+  main .mp {
+    position: relative;
+    display: inline-block;
+    width: 32%;
+    overflow: hidden;
+    word-break: break-word;
+    border: solid 2px #dddddd; }
+    main .mp .card {
+      display: flex;
+      /*      width: 30%;*/ }
+    main .mp .card1 {
+      border-top: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
+      display: flex; }
+    main .mp .card2 {
+      border-bottom: 1px solid #dddddd;
+      display: flex; }
+    main .mp .card3 {
+      border-bottom: 1px solid #dddddd;
+      display: flex; }
+    main .mp .io {
+      display: none;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      position: absolute; }
+
+main .mp:hover .io {
+  display: block; }
+
+@media screen and (max-width: 900px) {
+  main .mp {
+    width: 40%; } }
+@media screen and (max-width: 768px) {
+  main .mp {
+    width: 100%; } }
+main .direction span:hover {
+  background-color: #29b078; }
+
+/*# sourceMappingURL=end2.css.map */

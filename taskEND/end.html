@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="end.css" rel="stylesheet" type="text/css">
+</head>
+    <style>
+    #frame{
+        position:relative;
+        width:100%;
+        height:32vw;
+        overflow:hidden;
+        border-radius:5px
+    }
+    #dis{
+        position:absolute;
+        left:-50px;
+        top:-10px;
+        opacity:.5
+    }
+    #photos img{
+        float:left;
+        width:100%;
+        height: 32vw;
+    }
+    #photos {
+        position: absolute;
+        z-index:9;
+        width: 400%;
+        /*---修改图片数量的话需要修改下面的动画参数*/  }
+    .play{
+        animation: ma 20s ease-out infinite alternate;
+    }
+    @keyframes ma {
+        0%,25% {        margin-left: 0;       }
+        30%,50% {       margin-left: -100%;    }
+        55%,75% {       margin-left: -200%;    }
+        80%,100% {       margin-left: -300%;    }
+    }
+</style>
+<body>
+<header>
+    <div class="top-header">
+        <span>客服热线：010-594-78634</span>
+        <div class="logo">
+            <img src="qq.png">
+            <img src="wx.png">
+            <img src="sina.png">
+        </div>
+    </div>
+
+    <div class="dh-header">
+        <ul>
+            <li><a href="end.html" style="text-decoration:none;color: white">首页</a></li>
+            <li><a href="end2.html" style="text-decoration:none;color: white">职业</a></li>
+            <li><a href="end3.html" style="text-decoration:none;color: white">推荐</a></li>
+            <li><a href="#" style="text-decoration:none;color: white">关于</a></li>
+        </ul>
+        <div class="xdh-header">
+            <label for="input1">
+                <img src="menu.png">
+            </label>
+            <input id="input1" type="checkbox">
+            <div class="panel">
+                <p style="text-align: center"><a href="end.html" style="text-decoration:none;color: white">首页</a></p>
+                <p style="text-align: center"><a href="end2.html" style="text-decoration:none;color: white">职业</a></p>
+                <p style="text-align: center"><a href="end3.html" style="text-decoration:none;color: white">推荐</a></p>
+                <p style="text-align: center;margin-bottom: 0;padding-bottom: 0"><a href="#" style="text-decoration:none;color: white">关于</a></p>
+            </div>
+         </div>
+    </div>
+</header>
+<main>
+    <div id="frame" >
+        <div id="photos" class="play" style="display: flex">
+            <div><img src="background.png" ></div>
+            <div><img src="background2.jpg" ></div>
+            <div><img src="background3.jpg" ></div>
+            <div><img src="background4.jpg" ></div>
+        </div>
+    </div>
+    <div class="container">
+    <div class="box">
+        <div class="box1">
+            <img src="huojian.png">
+            <p>高校</p>
+            <span >将五到七年的成长时间，缩短到一年到三年</span>
+        </div>
+        <div class="box2">
+            <img src="huojian.png">
+            <p>规范</p>
+            <span >标准的实战教程，不会走弯路</span>
+        </div>
+        <div class="box3">
+            <img src="huojian.png">
+            <p>人脉</p>
+            <span >同班好友，同院学长，技术大师，入学就混入职脉圈，为以后铺平道路。</span>
+        </div>
+        <div class="box4">
+            <img src="icon-head.png">12400
+            <span>累计在线学习人数</span>
+            <img src="icon-head.png">12400
+            <span>学员已找到满意工作</span>
+        </div>
+    </div>
+    <p style="text-align: center">如何学习</p>
+    <div class="howlearn">
+        <div class="learn1">
+            <img src="icon-flow-1.png">
+            <span>匹配你现在的个人情况寻找适合自己的岗位</span>
+            <img src="right.png">
+        </div>
+        <div class="learn1">
+            <img src="icon-flow-2.png">
+            <span>了解职业前景薪金待遇、竞争压力等</span>
+            <img src="right.png">
+        </div>
+        <div class="learn1">
+            <img src="icon-flow-3.png">
+            <span>掌握行业内顶级技能</span>
+            <img src="right.png">
+        </div>
+        <div class="learn1">
+            <img src="icon-flow-4.png">
+            <span>查看职业目标任务</span>
+            <img src="right.png">
+        </div>
+    </div>
+    <div class="howlearn1">
+        <div class="learn1">
+            <img src="icon-flow-5.png">
+            <span>参考学习资料，掌握技能点，逐个完成任务</span>
+            <img src="right.png">
+        </div>
+        <div class="learn1">
+            <img src="icon-flow-6.png">
+            <span>加入班级，和小伙帮们互相帮助，一块学习</span>
+            <img src="right.png">
+        </div>
+        <div class="learn1">
+            <img src="icon-flow-7.png">
+            <span>选择导师，一路引导，加速自己成长</span>
+            <img src="right.png">
+        </div>
+        <div class="learn1">
+            <img src="icon-flow-8.png">
+            <span>完成职业技能，升级业界大牛</span>
+            <img src="right.png">
+        </div>
+    </div>
+    <p style="margin-top: 80px;margin-bottom: 80px;text-align: center">优秀学员展示</p>
+    <div class="student">
+        <div class="student1">
+            <img src="Avatar1.png">
+            <span>技术顾问：罗大佑</span>
+            <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。 曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+        </div>
+        <div class="student1">
+            <img src="Avatar.png">
+            <span>技术顾问：罗大佑</span>
+            <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。 曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+        </div>
+        <div class="student1">
+            <img src="Avatar2.png">
+            <span>技术顾问：罗大佑</span>
+            <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。 曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+        </div>
+        <div class="student1">
+            <img src="pic.png">
+            <span>技术顾问：罗大佑</span>
+            <p>百度技术总监：互联网基础服务领域，从事虚拟主机、云服务器、域名。 曾任新网高级技术经理，负责技术研发、团队管理与建设。</p>
+        </div>
+    </div>
+    <p style="margin-top: 80px;margin-bottom: 80px;text-align: center">战略合作企业</p>
+    <div class="enterprise">
+    <div class="company"><img src="alibaba.png"></div>
+    <div class="company"><img src="qiniu.png"></div>
+    <div class="company"><img src="jinshanyun.png"></div>
+    <div class="company"><img src="yuntongxun.png"></div>
+    <div class="company"><img src="huanxin.png"></div>
+</div>
+    <div>
+        <p style="margin-top: 80px;text-align: center">友情链接</p>
+        <div style="display: flex;justify-content: space-around;font-size: 14px;">
+            <span>手机软件</span>
+            <span>教师招聘</span>
+            <span>找工作</span>
+            <span>教师招聘</span>
+            <span>找工作</span>
+        </div>
+        <div style="display: flex;justify-content: space-around;font-size: 14px;">
+            <span>手机软件</span>
+            <span>教师招聘</span>
+            <span>找工作</span>
+            <span>教师招聘</span>
+            <span>找工作</span>
+        </div>
+    </div>
+    </div>
+</main>
+
+<footer style="color: white;
+    background-color: #29b078;
+    width: 100%;">
+    <div class="db">
+        <div class="f1">
+            <span>技能书-------改变你我</span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span>关于我们 | 联系我们 | 合作企业</span>
+        </div>
+        <div class="f2">
+            <span>旗下网站</span>
+            <span>葡萄藤轻游戏桌游精灵</span>
+            <span>草船云孵化器   最强IT特训营</span>
+        </div>
+        <div class="f3">
+            <span>微信公众平台</span>
+            <img src="qrcode.png">
+        </div>
+<!--        <p style="text-align: center">Copyright © 2015技能树 www.jnshu.com All Rights Reserved | 京ICP备13005880号</p>-->
+    </div>
+</footer>
+<p style="text-align: center;margin: 0;background-color: #29b078;color:white;">Copyright © 2015技能树 www.jnshu.com All Rights Reserved | 京ICP备13005880号</p>
+</body>
+</html>
