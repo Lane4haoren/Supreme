@@ -1,0 +1,43 @@
+body{
+    padding: 0;
+    max-width: 640px;
+    margin: 0 auto;
+}
+.box1{
+    border-radius:25px;
+    margin: 3% 1.6% 0 1.6%;
+    background-color: orange;
+    width: 30%;
+    height: 192px;
+    float: left;
+}
+#star{
+    cursor: pointer;
+    outline:none;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 100%;
+    background-color: white;
+    border: solid 3px orange;
+    color: orange;
+    margin: 10px 0;
+}
+#end{
+    cursor: pointer;
+    outline:none;
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 100%;
+    background-color: white;
+    border: solid 3px orange;
+    color: orange;
+    margin-bottom: 10px;
+}
+#star:hover{
+    background-color: orange;
+    color: white;
+}
+#end:hover{
+    background-color: orange;
+    color: white;
+}
