@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投死页</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="task2.css">
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <img src="task5-1_03.png">
+</header>
+<main>
+    <div class="box">
+        <p style="text-align: center;border-bottom: 1px solid #dddddd;margin: 0;padding: 10px 0">玩家配比</p>
+        <div style="height: 380px;float: left">
+            <div style="margin: 50px"><img src="1376894444939tfev26fdjs.png" style="max-width: 100px"><span >杀手：<span id="kunka"></span>人</span></div>
+            <div ><img src="xiguapi.png" style="max-width: 100px"><span >平民：<span id="chaoxi"></span>人</span></div>
+        </div>
+    </div>
+<!--        <button class="box1" onclick="myFunction();herFunction()">点击设置</button>-->
+    <div class="box3">
+        请输入玩家人数<input oninput="myFunction()" type="number" id="cat" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">玩家人数6-18人
+    </div>
+    <button class="box1" style="margin-bottom: 20px" onclick="herFunction()">
+        去发牌
+    </button>
+</main>
+<script type="text/javascript" src="task2.js"></script>
+</body>
+</html>
