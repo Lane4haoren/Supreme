@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>number</title>
+    <link rel="stylesheet" href="number.css">
+    <link rel="stylesheet" href="reset.css">
+    <script type="text/javascript" src="number.js"></script>
+</head>
+<body onload="distribute()">
+<div class="header">
+    <a href=""><img src="image/select.png"></a>
+    <span>参数设定</span>
+    <a href=""><img src="image/circle.png"></a>
+</div>
+<div class="main">
+    <div class="up">
+        <span>玩家配比</span>
+    </div>
+    <div class="middle">
+        <img src="image/1376894444939tfev26fdjs.png" style="max-width: 120px">
+        杀手<input type="text" name="killer" id="killer" value="1">人
+        <div class="gap"></div>
+        <img src="image/xiguapi.png" style="max-width: 120px">
+        平民<input type="text" name="civil" id="civil" value="3">人
+    </div>
+    <div class="down">
+        <span>请输入玩家人数</span><input type="text" name="number" id="number1" value="4" onblur="getNum()"><span class="sp1">人数4-18人</span>
+        <input type="button" class="button" value="去发牌" onclick="turnPage()">
+    </div>
+</div>
+</body>
+</html>

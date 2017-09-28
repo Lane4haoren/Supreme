@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-4</title>
+    <link rel="stylesheet" href="js-4.css">
+</head>
+<body>
+<div class="header">
+    <a href="#"><img src="image/select.png"></a>
+    <span id="headerWord"></span>
+    <a href="#"><img src="image/exit.png"></a>
+</div>
+<div class="mainArea">
+    <div id="vote"></div>
+    <div id="choice">
+        <div id="days"></div>
+        <div id="stepsArea">
+            <input type="button" class="steps" id="step1" value="杀手杀人">
+            <p id="killed"></p>
+            <input type="button" class="steps" id="step2" value="亡灵发表遗言">
+            <input type="button" class="steps" id="step3" value="所有玩家发表遗言">
+            <input type="button" class="steps" id="step4" value="投票">
+        </div>
+        <div class="downButton">
+            <input type="button" class="button1 left" value="结束游戏">
+            <input type="button" class="button1 right" value="法官日志" onclick="check()">
+        </div>
+    </div>
+    <div id="journal">
+    </div>
+</div>
+
+<div class="gap"></div>
+<input type="button" id="button" class='button' value="开始游戏" onclick="turnPage()">
+<script src="jquery-3.1.1.min.js"></script>
+<script src="js-4.js"></script>
+</body>
+</html>

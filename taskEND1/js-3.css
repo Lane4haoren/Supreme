@@ -1,0 +1,71 @@
+body {
+}
+
+.header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2abddf;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.main {
+  position: relative;
+  width: 70%;
+  height: 60vh;
+  margin: 2rem auto;
+  border: 2px solid white;
+}
+.main #pageNumber {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-top: -1rem;
+  margin-left: -1rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid white;
+  font-size: 120%;
+}
+.main #fanpai {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -150px;
+}
+.main #info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 3rem auto 0 auto;
+  opacity: 0;
+}
+.main #info #identity {
+  margin-top: 1rem;
+  text-align: center;
+  height: 1.5rem;
+  color: #46b8da;
+  font-size: 120%;
+  background-color: #ffedc5;
+  border: none;
+}
+
+#button {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  margin-left: -10rem;
+  background-color: orange;
+  color: white;
+  width: 20rem;
+  height: 3rem;
+  font-size: 150%;
+  border: none;
+}
+
+/*# sourceMappingURL=js-3.css.map */
