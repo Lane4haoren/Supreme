@@ -1,0 +1,68 @@
+html{
+  max-width: 640px;
+  margin: 0 auto!important;
+}
+
+.header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2abddf;
+  color: white;
+}
+
+.main .up {
+  width: 90%;
+  margin: 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);
+  height: 2rem;
+}
+.main .middle {
+  font-size: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  box-sizing: border-box;
+  height: 15rem;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);
+}
+.main .middle input {
+  width: 2.5rem;
+  border: none;
+  font-size: 150%;
+}
+.main .middle .gap {
+  width: 1rem;
+  height: 1rem;
+}
+.main .down {
+  box-sizing: border-box;
+  left: 5%;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);
+  font-size: 150%;
+}
+.main .down #number1 {
+  width: 2.5rem;
+  font-size: 150%;
+  margin: 0 1rem;
+}
+.main .down .sp1 {
+  color: orange;
+}
+.main .down .button {
+  width: 100%;
+  font-size: 90%;
+  background-color: orange;
+  color: white;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=number.css.map */
