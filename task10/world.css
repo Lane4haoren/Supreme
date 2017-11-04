@@ -1,0 +1,33 @@
+.list{
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin-top: 25px;
+    display: table;
+}
+caption{
+    border-bottom: 1px solid #dddddd;
+}
+.new{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    float: right;
+}
+label{
+    text-align: center;
+    width: 10%;
+}
+.each-page {
+    width: 2.4rem;
+    text-align: center;
+}
+.ECalendarBox{
+    z-index: 1;
+}
+.jhy{
+    margin: 15px 0;
+}
+.ld{
+    top: 50%;
+    transform: translate(0,30%);
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<main>
+    <div class="login" ng-app="myApp" ng-controller="myCtrl">
+        <p style="text-align: center;display: block;font-size: 25px;margin: 5px">后台登陆</p>
+        <div class="mota">
+            <img src="imgae/admin.png" style="float: left;display: block;transform:translate(0,18%)"><input ng-model="name" placeholder="用户名" >
+        </div>
+        <div class="mota">
+            <img src="imgae/password.png" style="float: left;display: block;top:50%;transform:translate(0,18%)"><input ng-model="psw" placeholder="密码" type="password">
+        </div>
+        <button class="denglu" ng-click="login()">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+    </div>
+</main>
+</body>
+<script type="text/javascript" src="index.js"></script>
+</html>

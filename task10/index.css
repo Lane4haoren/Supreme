@@ -1,0 +1,38 @@
+body{
+    background-color: aquamarine;
+    font-family:Microsoft YaHei;
+}
+main{
+    height: 600px;
+    display:flex; align-items:center;
+}
+.login{
+    text-align: center;
+    margin: 0 auto;
+    background: rgba(255,255,255,.8);
+    height: 280px;
+    width: 400px;
+}
+input{
+    float: left;
+    /*background:url(imgae/密码.png) no-repeat;*/
+    display: inline-block;
+    /*width: 100%;*/
+    margin: 15px 0;
+    outline:none;
+    border: none;
+}
+.mota{
+    display: inline-block;
+    margin: 10px 0;
+    background-color: white;
+    width: 80%;
+}
+button{
+    border: none;
+    background-color:#CD853F;
+    height: 50px;
+    display: inline-block;
+    margin-top: 20px;
+    width: 80%;
+}

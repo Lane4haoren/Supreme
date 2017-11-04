@@ -1,0 +1,112 @@
+<form ng-app="myApp" ng-controller="customersCtrl" name="myForm" novalidate nv-file-drop="" uploader="uploader" filters="queueLimit, customFilter">
+        <div class="dp">
+        <label id="ArticleTitle">新增article</label>
+        <div style="padding-top: 20px">
+            <label>标题名称</label>
+            <input type="text" class="form-control" style="width: 70%;display: inline-block" name="user" required ng-model="vm.user">
+            {{vm.user}}
+            <span style="color:red" ng-show="myForm.user.$error.required && myForm.user.$touched">用户名是必须的。</span>
+    </div>
+        <div style="padding-top: 20px">
+            <label>类型</label>
+            <select class="form-control" style="width: 20%;display: inline-block" name="type"ng-model="vm.type" required>
+                <option value="">全部</option>
+                <option value="0">首页Banner</option>
+                <option value="1">找职位Banner</option>
+                <option value="2">找精英Banner</option>
+                <option value="3">行业大图</option>
+            </select>
+            <span style="color:red" ng-show="myForm.type.$error.required && myForm.type.$touched">必选</span>
+            <select class="form-control" style="width: 20%;display: inline-block" name="industry"ng-model="vm.industry" required ng-if="vm.type==3">
+                <option value="">请选择</option>
+                <option value="0">移动互联网</option>
+                <option value="1">电子商务</option>
+                <option value="2">企业服务</option>
+                <option value="3">O2O</option>
+                <option value="4">教育</option>
+                <option value="5">金融</option>
+                <option value="6">游戏</option>
+            </select>
+            <span style="color:red" ng-show=" myForm.industry.$error.required && myForm.industry.$touched">必选</span>
+        </div>
+    <div style="padding-top: 20px">
+        <label>说明</label>
+        <div id="editor"></div>
+    </div>
+    <div style="padding-top: 20px">
+        <label>跳转链接</label><input type="text" class="form-control" name="url" ng-model="vm.url" required style="width: 70%;display: inline-block">
+        <span style="color:red" ng-show="myForm.url.$error.required && myForm.url.$touched">内容不能为空！</span>
+    </div>
+    <div>
+        <label>配图</label>
+        <input type="file" id="xdaTanFileImg" accept="image/*" style="display: inline-block" class="file" nv-file-select="" uploader="uploader" />
+    </div>
+    <img id="xmTanImg" style="width: 500px;height: 300px;">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th width="50%">Name</th>
+                    <th>Size</th>
+                    <th>Progress</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in uploader.queue">
+                    <td><strong>{{ item.file.name }}</strong></td>
+                    <td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+                    <td ng-show="uploader.isHTML5">
+                        <div class="progress" style="margin-bottom: 0;">
+                            <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+                        <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+                        <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+                    </td>
+                    <td nowrap>
+                        <button type="button" class="btn btn-success btn-xs" ng-click="item.upload();xmTanUploadImg()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+                            <span class="glyphicon glyphicon-upload"></span> Upload
+                        </button>
+                        <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                        </button>
+                        <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove();cler()">
+                            <span class="glyphicon glyphicon-trash"></span> Remove
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+    <div>
+        {{pp}}
+        <button class="btn"  ng-disabled="myForm.$invalid||pp" ng-click="hand(2)">立即提交</button>
+        <button class="btn" ng-disabled="myForm.$invalid||pp " ng-click="hand(1)">存为草稿</button>
+    </div>
+        </div>
+    </form>
+<script type="text/javascript">
+    var E = window.wangEditor;
+    var editor = new E('#editor');
+    editor.customConfig.menus = [
+        'head',  // 标题
+        'bold',  // 粗体
+        'italic',  // 斜体
+        'underline',  // 下划线
+        'strikeThrough',  // 删除线
+        'foreColor',  // 文字颜色
+        'backColor',  // 背景颜色
+        'link',  // 插入链接
+        'list',  // 列表
+        'justify',  // 对齐方式
+        'quote',  // 引用
+        'code',  // 插入代码
+        'undo',  // 撤销
+        'redo'  // 重复
+    ];
+    editor.create()
+</script>
+
+

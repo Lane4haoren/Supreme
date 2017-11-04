@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/Ecalendar.jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#ECalendar_date").ECalendar({
+            type:"time",   //模式，time: 带时间选择; date: 不带时间选择;
+            stamp : false,   //是否转成时间戳，默认true;
+            offset:[0,2],   //弹框手动偏移量;
+       //     format:"yyyy年mm月dd日",   //时间格式 默认 yyyy-mm-dd hh:ii;
+            skin:3,   //皮肤颜色，默认随机，可选值：0-8,或者直接标注颜色值;
+            step:10,   //选择时间分钟的精确度;
+            callback:function(v,e){} //回调函数
+        });
+        $("#ECalendar_date1").ECalendar({
+            type:"time",   //模式，time: 带时间选择; date: 不带时间选择;
+            stamp : false,   //是否转成时间戳，默认true;
+            offset:[0,2],   //弹框手动偏移量;
+       //     format:"yyyy年mm月dd日",   //时间格式 默认 yyyy-mm-dd hh:ii;
+            skin:3,   //皮肤颜色，默认随机，可选值：0-8,或者直接标注颜色值;
+            step:10,   //选择时间分钟的精确度;
+            callback:function(v,e){} //回调函数
+        });
+    })
+
+</script>
+<div ui-view>
+<div ng-controller="customersCtrl">
+    <div class="container">
+        <div class="list">
+            <div class="col-sm-12 col-md-6 col-lg-4 calendarWarp jhy"><label class="col-xs-4 col-md-4 col-lg-4 col-sm-4 ld">发布时间</label>
+                <div class="col-xs-8 col-md-8 col-lg-8 col-sm-8"><input  type="text" name="date" class='form-control col-xs-8 col-md-8 col-lg-8 col-sm-8' id="ECalendar_date" ng-model="a"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 calendarWarp jhy"><label class="col-xs-4 col-md-4 col-lg-4 col-sm-4 ld">------</label>
+                <div class="col-xs-8 col-md-8 col-lg-8 col-sm-8"><input  type="text" name="date" class='form-control col-xs-8 col-md-8 col-lg-8 col-sm-8' id="ECalendar_date1" ng-model="b"></div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 jhy"><label class="col-xs-4 col-md-4 col-lg-4 col-sm-4 ld">类型</label>
+                <div class="col-xs-8 col-md-8 col-lg-8 col-sm-8">
+                    <select class="form-control col-xs-8 col-md-8 col-lg-8 col-sm-8"  ng-model="type">
+                        <option value="">全部</option>
+                        <option value="0">首页Banner</option>
+                        <option value="1">找职位Banner</option>
+                        <option value="2">找精英Banner</option>
+                        <option value="3">行业大图</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 jhy" ><label class="col-xs-4 col-md-4 col-lg-4 col-sm-4 ld">状态</label>
+                <div class="col-xs-8 col-md-8 col-lg-8 col-sm-8">
+                    <select class="form-control col-xs-8 col-md-8 col-lg-8 col-sm-8" ng-model="status">
+                        <option value="">全部</option>
+                        <option value="1">草稿</option>
+                        <option value="2">上线</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 jhy" style="float: right">
+                <button style="color: #fff;background-color: #5cb85c;border-color: #4cae4c;float: right" class="btn" ng-click="her()">搜索</button>
+                <button style="color: #fff;background-color: #d9534f;border-color: #d43f3a;float: right" class="btn" ng-click="she()">清空</button>
+            </div>
+            </div>
+
+        <div class="list">
+            <table class="table table-striped">
+                <caption><b>Article列表</b><button ui-sref="computers.news" class="btn new" ng-click="lll()">+新增</button></caption>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>预览</th>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>发布时间</th>
+                    <th>修改时间</th>
+                    <th>发布者</th>
+            <th>状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="x in names" class="ng-scope">
+            <td>{{ x.id }}</td>
+            <td><img style="width: 30px"ng-src="{{x.img}}"></td>
+            <td>{{x.title}}</td>
+            <td>{{x.type | reverse}}</td>
+            <td>{{x.createAt| date:"yyyy-MM-dd HH:mm:ss"}}</td>
+            <td>{{x.updateAt| date:"yyyy-MM-dd HH:mm:ss"}}</td>
+            <td>{{x.author}}</td>
+            <td>{{x.status | op}}</td>
+            <td>
+                <button class="btn btn-primary" ng-click="change(x.status,x.id)">{{x.status | cut}}</button>
+                <button  ng-click="editor(x.id)" class="btn btn-success">编辑</button>
+                <button class="btn btn-danger" ng-click="delete(x.id)">删除</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <span ng-bind="total"></span>
+    <ul class="pager">
+        <button ng-click="frist()"ng-disabled="page123==1" class="btn">首页</button>
+        <button ng-click="last()" ng-disabled="page123==1" class="btn">&laquo;上一页</button>
+        <button ng-repeat="x in newPages" ng-click="ye(x)" class="btn">{{x}}</button>
+        <button ng-click="next()" ng-disabled="page123==ym" class="btn">下一页&raquo;</button>
+        <button ng-click="lastpage()"ng-disabled="page123==ym" class="btn">末页</button>
+        跳转至<input id="qop" style="width: 2.4rem">页
+        <button ng-click="skip()" class="btn" >确定</button>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+
+

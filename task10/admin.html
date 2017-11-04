@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="world.css">
+    <link rel="stylesheet" href="news.css">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body ng-app="routingDemoApp">
+    <div class="accordion" id="accordion2">
+        <b>萝卜多后台管理系统</b>
+        <div class="accordion-group">
+            <div class="sk">
+            <div style="line-height: 50px" class="accordion-heading,accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                信息管理
+            </div>
+            </div>
+            <div id="collapseOne" class="accordion-body collapse" style="height: 0; ">
+                <div class="accordion-inner">
+                    <a ui-sref="one">首页</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-group">
+            <div class="sk">
+            <div style="line-height: 50px" class="accordion-heading,accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                article管理
+            </div>
+            </div>
+            <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                    <a ui-sref="computers">article</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dw">
+        <span style="margin-right: 20px">admin</span>
+        <img src="imgae/退出%20(1).png" ng-click="" style="margin-right: 20px">
+    </div>
+<div class="role">
+    <div ui-view></div>
+</div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<script src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+<script src="https://cdn.bootcss.com/angular-file-upload/2.5.0/angular-file-upload.min.js"></script>
+
+<script type="text/javascript" src="admin.js"></script>
+<script type="text/javascript" src="news.js"></script>
+<script type="text/javascript" src="runoob.js"></script>
+</html>
